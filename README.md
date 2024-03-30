@@ -1,3 +1,4 @@
 # OIBSIP
-Oasis virtual internship in Web Development and Designing
+OASIS INFOBYTE Internship in Web Development and Designing
+
 Level 2
