@@ -1,0 +1,244 @@
+<html>
+<head>
+    <title>login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color:cornsilk;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        
+        }
+        a  {
+        width: 100%;
+        padding: 10px;
+        background-color: #4caf50;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        }
+        }
+    </style>
+</head>
+<body >
+
+<form >
+    <h2>Click here to Register</h2>
+    
+    <a href="register.html">Signup</a>
+</form>
+
+
+</body>
+</html>
+
+
+register.html
+<html>
+      <style>
+       body {
+        font-family: Arial, sans-serif;
+        background-color: cornsilk;
+        margin: 0;
+        padding: 20px;
+    }
+       
+           .container {
+        max-width: 400px;
+        margin: 0 auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+       h2 {
+        color: #333;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    input[type="text"], input[type="radio"], input[type="textarea"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+    button {
+        width: 100%;
+        padding: 10px;
+        background-color: #4caf50;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: #45a049;
+    }
+    .form-group {
+        margin-bottom: 20px;
+    }
+    .form-group label {
+        font-weight: bold;
+    }
+        }
+    </style>
+    <body>
+        <div class="container">
+            
+    <h2>Registration form</h2>
+            
+    <form action="#" onsubmit="myfun()">
+         <div class="form-group">
+             <b>Enter Firstname:</b><input type="text" id="first"><span id=err></span> <br><br></div>
+              <div class="form-group">
+                  <b>Enter Middlename:</b><input type="text" id="middle"><span id=err1></span><br><br></div>
+                   <div class="form-group">
+                       <b>Enter Lastname:</b> <input type="text" id="last"><span id=err2></span>   <br><br></div>
+                        <div class="form-group">
+                            <b>Enter Mobilenumber:</b><input type="text" id="phno"><span id=err3></span><br><br></div>
+                             <div class="form-group">
+                                 <b>Aadhar Cardno:</b><input type="text" id="aadhar" ><span id=err4></span><br><br></div>
+                                  <div class="form-group">
+    <b>Gender:</b><input type="radio" name="male" value="">Male
+                                      <input type="radio" name="female" value="">Female<br><br></div>
+                                       <div class="form-group">
+    <b>Occupation:</b><input type="radio" name="1" value="">Employee
+        <input type="radio" name="2" value="">Student
+        <input type="radio" name="3" value="">Farmer
+                                           <input type="radio" name="4" value="">Self-employee<br><br></div>
+                                            <div class="form-group">
+                                                <b>Address:</b><input type="textarea" id="address"><span id=err5></span><br><br></div>
+                                                <div class="form-group">
+                                                    <b>Pincode:</b><input type="text" id="pin"><span id=err6></span> <br><br></div>
+                <button type="submit">Register</button>
+
+        </form>
+        </div>
+        
+        <script>
+            function myfun()
+            {
+                var first=document.getElementById("first");
+                var err=document.getElementById("err");
+                var reg=/^[A-Za-z]+$/;
+                if(reg.test(first.value))
+                    {
+                        first.style.color="green";
+                        err.innerHTML="correct";
+                  }
+                else
+                {
+                    first.style.color="red";
+                    err.innerHTML="Not correct";
+                    event.preventDefault();
+                }
+           
+                var middle=document.getElementById("middle");
+                var err=document.getElementById("err1");
+                var reg=/^[A-Za-z]+$/;
+                if(reg.test(middle.value))
+                    {
+                        middle.style.color="green";
+                        err1.innerHTML="correct";
+                  }
+                else
+                {
+                    middle.style.color="red";
+                    err1.innerHTML="Not correct";
+                    event.preventDefault();                    
+                }
+          
+                var last=document.getElementById("last");
+                var err=document.getElementById("err2");
+                var reg=/^[A-Za-z]+$/;
+                if(reg.test(last.value))
+                    {
+                        last.style.color="green";
+                        err2.innerHTML="correct";
+                  }
+                else
+                {
+                    last.style.color="red";
+                    err2.innerHTML="Not correct";
+                    event.preventDefault();
+                }
+          
+                var ph=document.getElementById("phno");
+                var err=document.getElementById("err3");
+                var reg=/^\d{10}$/;
+                if(reg.test(ph.value))
+                    {
+                        ph.style.color="green";
+                        err3.innerHTML="correct";
+                    }
+                else
+                {
+                    ph.style.color="red";
+                    err3.innerHTML="Not correct";
+                    event.preventDefault();
+                }
+                
+                var aadhar=document.getElementById("aadhar");
+                var err=document.getElementById("err4");
+                var reg=/^\d{4}[-.]\d{4}[-.]\d{4}$/;
+                if(reg.test(aadhar.value))
+                    {
+                        aadhar.style.color="green";
+                        err4.innerHTML="correct";
+                  }
+                else
+                {
+                    aadhar.style.color="red";
+                    err4.innerHTML="Not correct";
+                    event.preventDefault();
+                }
+                
+                var address=document.getElementById("address");
+                var err=document.getElementById("err5");
+                var reg=/^[A-Za-z]+$/;
+                if(reg.test(address.value))
+                    {
+                        address.style.color="green";
+                        err5.innerHTML="correct";
+                  }
+                else
+                {
+                    address.style.color="red";
+                    err5.innerHTML="Not correct";
+                    event.preventDefault();
+                }
+            
+                var pin=document.getElementById("pin");
+                var err=document.getElementById("err6");
+                var reg=/^[0-9]{6}/;
+                if(reg.test(pin.value))
+                    {
+                        pin.style.color="green";
+                        err6.innerHTML="correct";
+                  }
+                else
+                {
+                    pin.style.color="red";
+                    err6.innerHTML="Not correct";
+                    event.preventDefault();
+                }
+                
+            }  
+        
+         
+        </script>
+    </body>
+</html>
